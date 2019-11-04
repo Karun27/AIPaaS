@@ -1,5 +1,9 @@
 .App {
   text-align: center;
+  
+}
+.body{
+  background-color: black;
 }
 
 .App-logo {
@@ -19,4 +23,24 @@
 
 .App-link {
   color: #09d3ac;
+}
+
+
+.slide-container {
+  width: 400px;
+  margin: auto; }
+
+h3 {
+  text-align: center; }
+
+.each-slide > div {
+  display: inline-block;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  height: 200px;
+  width: auto;
+}
+p{
+ color:#f04a3e;
 }
