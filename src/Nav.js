@@ -31,6 +31,9 @@ const Example = (props) => {
               <NavLink href="/components/">About</NavLink>
             </NavItem>
             <NavItem>
+              <NavLink href="/components/">Org</NavLink>
+            </NavItem>
+            <NavItem>
               <NavLink href="https://github.com/reactstrap/reactstrap">GitHub</NavLink>
             </NavItem>
           </Nav>

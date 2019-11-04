@@ -70,7 +70,7 @@ class LoginPage extends Component {
        this.props.history.push(path);
          }
          else{
-          let path1 = `/`;
+          let path1 = `/`;  
           this.props.history.push(path1);
          }
        }
@@ -95,9 +95,8 @@ class LoginPage extends Component {
       <div>
         
       <Navbar />
-      <div class="container">
-    
-        <br></br>
+      <div id="container">
+
         <div class="row">
         <div class="col-md-3">
      

@@ -4,6 +4,7 @@ import LoginPage from './LoginPage';  // or whatever the location is
 import Result from './Result'; // or whatever the location is
 import Register from './Register';
 import Data from './axios/Data';
+import HomePage from'./HomePage';
 class App extends Component {
   render() {
     return (      
@@ -12,6 +13,7 @@ class App extends Component {
       <Route exact path="/" component={LoginPage} exact/>
       <Route path="/Register" component={Register}/>
       <Route path="/Data" component={Data}/>
+      <Route path="/Home" component={HomePage}/>
     </Switch>
 </BrowserRouter>
     )};  

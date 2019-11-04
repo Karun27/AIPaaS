@@ -41,6 +41,28 @@ h3 {
   height: 200px;
   width: auto;
 }
-p{
- color:#f04a3e;
+
+
+.circle {
+  background: #043E78;
+  border-radius: 200px;
+  color: white;
+  height: 150px;
+  width: 150px;
+  display: table;
+  margin: 20px auto;
+}
+.circle p {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  vertical-align: middle;
+  text-align: center;
+  display: table-cell;
+}
+#container{
+position: fixed;
+top: 50%;
+left: 50%;
+-webkit-transform: translate(-50%, -50%);
+transform: translate(-50%, -50%);
 }
