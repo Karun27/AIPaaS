@@ -3,7 +3,7 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom'
 import LoginPage from './LoginPage';  // or whatever the location is
 import Result from './Result'; // or whatever the location is
 import Register from './Register';
-
+import Data from './axios/Data';
 class App extends Component {
   render() {
     return (      
@@ -11,6 +11,7 @@ class App extends Component {
     <Switch>
       <Route exact path="/" component={LoginPage} exact/>
       <Route path="/Register" component={Register}/>
+      <Route path="/Data" component={Data}/>
     </Switch>
 </BrowserRouter>
     )};  
