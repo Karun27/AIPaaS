@@ -3,7 +3,7 @@ import './App.css';
 import Navbar from './Nav.js'
 import Background from './Background';
 import {Button, Input, Card, CardText, CardTitle, Col, Row, Container,
- Modal, ModalHeader, ModalBody, ModalFooter} from 'reactstrap';
+ Modal, ModalHeader, ModalBody, ModalFooter, } from 'reactstrap';
 import Data from './axios/Data';
 import Test from './Test';
 
@@ -53,7 +53,7 @@ class HomePage extends Component {
         
       <Navbar />
       <p class="text-center">
-          <h1>AI PaaS Services</h1></p>
+           <h1 className="display-4 my-4 text-center text-muted"><b>AI PaaS</b></h1></p>    
      <Container>
       <div class="row">   
             <div class="circle">

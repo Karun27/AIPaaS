@@ -39,13 +39,13 @@ export const ItemCard = ({toggleEditing, item, onChange, index, onDelete}) => (
                 />
               </div>
               :
-              <Link to="/Register">
+              <Link to="/Project">
               <Button color="info">
                   
                 <h4 className="card-title text-center">{item.name}</h4>
                 <div className="row justify-content-center mb-4">
                   <p className="card-text">
-                    <span className="badge badge-light py-2 mr-5">Type</span>
+                    <span className="badge badge-light py-2 mr-2">Type</span>
                     <span>{item.type}</span>
                   </p>
                   <p className="card-text">

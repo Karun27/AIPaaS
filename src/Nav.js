@@ -11,7 +11,7 @@ import {
   DropdownToggle,
   DropdownMenu,
   DropdownItem } from 'reactstrap';
-import image1 from './images/msoft.png';
+import image1 from './images/miracle.png';
 
 const Example = (props) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -20,7 +20,7 @@ const Example = (props) => {
 
   return (
     <div>
-      <Navbar color="light" light expand="md">
+      <Navbar color="dark" light expand="md">
         <NavbarBrand href="/">
            <img src={image1} height="30"/>
         </NavbarBrand>
@@ -28,7 +28,7 @@ const Example = (props) => {
         <Collapse isOpen={isOpen} navbar>
           <Nav className="ml-auto" navbar>
             <NavItem>
-              <NavLink href="/components/">About</NavLink>
+              <NavLink href="/components/" text-color="white">About</NavLink>
             </NavItem>
             <NavItem>
               <NavLink href="/components/">Org</NavLink>
