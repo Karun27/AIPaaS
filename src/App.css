@@ -1,4 +1,4 @@
-.App {
+/* .App {
   text-align: center;
   
 }
@@ -23,7 +23,7 @@
 
 .App-link {
   color: #09d3ac;
-}
+} */
 
 
 .slide-container {
@@ -59,7 +59,7 @@ h3 {
   text-align: center;
   display: table-cell;
 }
-#container{
+.container{
 position: fixed;
 top: 50%;
 left: 50%;
