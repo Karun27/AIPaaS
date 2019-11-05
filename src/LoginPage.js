@@ -95,7 +95,7 @@ class LoginPage extends Component {
       <div>
         
       <Navbar />
-      <div class="container">
+      <div id="container">
 
         <div class="row">
         <div class="col-md-3">

@@ -5,6 +5,7 @@ import Background from './Background';
 import {Button, Input, Card, CardText, CardTitle, Col, Row, Container,
  Modal, ModalHeader, ModalBody, ModalFooter} from 'reactstrap';
 import Data from './axios/Data';
+import Test from './Test';
 
 
 
@@ -72,8 +73,9 @@ class HomePage extends Component {
             </div>
             </div>
             <div class="row">   
-            <div class="col-sm-6 col-md-5 offset-md-2 col-lg-6 offset-lg-9">
-      <Button color="secondary" onClick={this.ac}>New Project</Button>
+            <div class="col-sm-12">
+                <Test />
+      {/* <Button color="secondary" onClick={this.ac}>New Project</Button>
       <Modal isOpen={this.state.modal} toggle={this.ac}>
           <ModalHeader>Project Information</ModalHeader>
           <ModalBody>
@@ -87,18 +89,8 @@ class HomePage extends Component {
             <Button color="primary" type="submit" onClick={this.handleSubmit} value="submit">Add Project</Button>{' '}
             <Button color="secondary" onClick={this.ac}>Cancel</Button>
           </ModalFooter>
-        </Modal>
+        </Modal> */}
     </div>
-    </div>
-    <div class="row"></div>
-    <div class="row">
-        <div class="col-sm-9">
-    <Card body inverse style={{ backgroundColor: '#333', borderColor: '#333' }}>
-        <CardTitle>{this.state.name}</CardTitle>
-        <CardText>With supporting text below as a natural lead-in to additional content.</CardText>
-        <Button>Button</Button>
-      </Card>
-      </div>
     </div>
     
     </Container>
