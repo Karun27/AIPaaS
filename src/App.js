@@ -5,6 +5,7 @@ import Result from './Result'; // or whatever the location is
 import Register from './Register';
 import Data from './axios/Data';
 import HomePage from'./HomePage';
+import ProjectInfo from './ProjectInfo';
 class App extends Component {
   render() {
     return (      
@@ -14,6 +15,7 @@ class App extends Component {
       <Route path="/Register" component={Register}/>
       <Route path="/Data" component={Data}/>
       <Route path="/Home" component={HomePage}/>
+      <Route path="/Project" component={ProjectInfo}/>
     </Switch>
 </BrowserRouter>
     )};  

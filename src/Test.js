@@ -9,6 +9,7 @@ class Test extends Component {
     owner:"",
     items: [
     ]
+    
   };
 
   /**
@@ -69,6 +70,7 @@ class Test extends Component {
     });
   };
 
+
   /**
    * Update the Name and/or Price of an item.
    * @param event
@@ -113,7 +115,8 @@ class Test extends Component {
             type={type}
             owner={owner}
             onChange={this.handleInputChange}
-            onSubmit={this.addItem} 
+            onSubmit={this.addItem}
+            
         />
 
         <h1 className="display-4 my-4 text-center text-muted">Ongoing Projects</h1>

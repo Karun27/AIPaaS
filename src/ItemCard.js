@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import {Button} from 'reactstrap';
+import {Link} from 'react-router-dom';
 
 export const ItemCard = ({toggleEditing, item, onChange, index, onDelete}) => (
     <div className="col-md-6 col-lg-3">
@@ -38,7 +39,9 @@ export const ItemCard = ({toggleEditing, item, onChange, index, onDelete}) => (
                 />
               </div>
               :
+              <Link to="/Register">
               <Button color="info">
+                  
                 <h4 className="card-title text-center">{item.name}</h4>
                 <div className="row justify-content-center mb-4">
                   <p className="card-text">
@@ -52,6 +55,7 @@ export const ItemCard = ({toggleEditing, item, onChange, index, onDelete}) => (
                 </div>
                 
               </Button>
+              </Link>
           }
 
           <div className="row justify-content-center">
@@ -88,4 +92,5 @@ ItemCard.propTypes = {
   toggleEditing: PropTypes.func.isRequired,
   onChange: PropTypes.func.isRequired,
   onDelete: PropTypes.func.isRequired,
+  onClick: PropTypes.func.isRequired,
 };

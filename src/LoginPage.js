@@ -66,7 +66,7 @@ class LoginPage extends Component {
        }
        route() {
          if(this.state.username =="abc"&& this.state.password=="abc"){
-        let path = `Data`;
+        let path = `Home`;
        this.props.history.push(path);
          }
          else{
