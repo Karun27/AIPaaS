@@ -119,14 +119,16 @@ h3 {
   margin-top:7%;
 }
 
- table.grid td {
-  border: 50px solid white;
-  padding: 14px;
-} 
+ /* table.grid td {
+  border: 5px solid white;
+  padding: 14px 150px;
+}  */
+
+
 /* table.grid tr{
   margin-top:20%;
-} */ */
-table {
+} */ 
+/* table {
   border-spacing: 28px 52px;
 }
 td    {padding: 16px;}
@@ -134,4 +136,11 @@ td    {padding: 16px;}
 #one,
 #two{
   padding-left:20%;
+} */
+table.grid{
+  align-self: center;
+}
+.pink{
+margin-left: 21rem;
+
 }

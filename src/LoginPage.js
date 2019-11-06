@@ -9,9 +9,8 @@ class LoginPage extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      username: "",
-      password: "",
-      error: "",
+      username: '',
+      password: '',
 
     };
 
@@ -21,6 +20,7 @@ class LoginPage extends Component {
     // this.dismissError = this.dismissError.bind(this);
     this.routeChange = this.routeChange.bind(this);
     this.commonChange = this.commonChange.bind(this);
+    this.showValue = this.showValue.bind(this);
     // this.authorize = this.authorize.bind(this);
     this.route = this.route.bind(this);
 
@@ -67,9 +67,9 @@ class LoginPage extends Component {
         [event.target.name]: event.target.value
     });
 }
-showValue(){
+showValue(event){
   event.preventDefault();
-  alert('name '+ this.state.nameValue + ' age: ' + this.state.ageValue)
+  alert('name: '+ this.state.username + ' age: ' + this.state.password)
 }
   routeChange() {
     let path = `Register`;
@@ -113,7 +113,7 @@ showValue(){
               <Card body inverse style={{ backgroundColor: '#333', borderColor: '#333' }}>
                 <CardTitle>AI PaaS Login Portal </CardTitle>
 
-                <form onClick={this.showValue}>
+                <form >
                   {/* {
             this.state.error &&
             <p color="danger" data-test="error" onClick={this.dismissError}>
@@ -127,7 +127,7 @@ showValue(){
                   <label>Password</label>
                   <Input type="password" onChange={this.commonChange}  required />
 
-                  <Button color="primary" size="sm" type="submit" >Login</Button>
+                  <Button color="primary" size="sm" type="submit" onClick={this.showValue} >Login</Button>
                
           <Button color="secondary" size="sm" type="submit" onClick={this.routeChange}>Register</Button>
 
