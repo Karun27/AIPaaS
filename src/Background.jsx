@@ -21,7 +21,7 @@ const properties = {
 
 const Background = () => {
   return (
-    <div class="pink">
+    <div >
 
       <table cellsSpacing="1">
         <tbody>
