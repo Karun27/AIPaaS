@@ -9,8 +9,8 @@ class LoginPage extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      username: '',
-      password: '',
+      username: 'abc',
+      password: 'abc',
 
     };
 
@@ -19,8 +19,7 @@ class LoginPage extends Component {
     // this.handleSubmit = this.handleSubmit.bind(this);
     // this.dismissError = this.dismissError.bind(this);
     this.routeChange = this.routeChange.bind(this);
-    this.commonChange = this.commonChange.bind(this);
-    this.showValue = this.showValue.bind(this);
+
     // this.authorize = this.authorize.bind(this);
     this.route = this.route.bind(this);
 
@@ -62,15 +61,7 @@ class LoginPage extends Component {
   //     username: evt.target.value,
   //   });
   // };
-  commonChange(event) {
-    this.setState({
-        [event.target.name]: event.target.value
-    });
-}
-showValue(event){
-  event.preventDefault();
-  alert('name: '+ this.state.username + ' age: ' + this.state.password)
-}
+
   routeChange() {
     let path = `Register`;
     this.props.history.push(path);
@@ -113,7 +104,7 @@ showValue(event){
               <Card body inverse style={{ backgroundColor: '#333', borderColor: '#333' }}>
                 <CardTitle>AI PaaS Login Portal </CardTitle>
 
-                <form >
+                <form>
                   {/* {
             this.state.error &&
             <p color="danger" data-test="error" onClick={this.dismissError}>
@@ -122,12 +113,12 @@ showValue(event){
           } */}
 
                   <label>User Name</label>
-                  <Input type="text" onChange={this.commonChange} required />
+                  <Input type="text" required />
 
                   <label>Password</label>
-                  <Input type="password" onChange={this.commonChange}  required />
+                  <Input type="password"   required />
 
-                  <Button color="primary" size="sm" type="submit" onClick={this.showValue} >Login</Button>
+                  <Button color="primary" size="sm" type="submit" onClick={this.route}  >Login</Button>
                
           <Button color="secondary" size="sm" type="submit" onClick={this.routeChange}>Register</Button>
 
