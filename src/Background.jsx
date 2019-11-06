@@ -10,7 +10,7 @@ const slideImages = [
  
 const properties = {
   duration: 5000,
-  transitionDuration: 500,
+  transitionDuration: 100,
   infinite: true,
   indicators: true,
   arrows: true,
@@ -21,8 +21,9 @@ const properties = {
  
 const Background = () => {
     return (
+      <div class="container-fluid">
       <div className="slide-container">
-        <Slide {...properties}>
+        <Slide >
           <div className="each-slide">
             <div> <img src={require('./images/1.jpg')} />
             
@@ -42,6 +43,7 @@ const Background = () => {
             </div>
           </div>
         </Slide>
+      </div>
       </div>
     )
 }

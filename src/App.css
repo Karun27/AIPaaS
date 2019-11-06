@@ -27,8 +27,12 @@
 
 
 .slide-container {
-  width: 400px;
-  margin: auto; }
+  
+ height: 400px;
+ width:640px;
+ /* margin-left: 17%;
+ margin-bottom: 20%; */
+ }
 
 h3 {
   text-align: center; }
@@ -38,7 +42,8 @@ h3 {
   align-items: center;
   justify-content: center;
   background-size: cover;
-  height: 200px;
+  height: 500px;
+
   width: auto;
 }
 
@@ -59,13 +64,7 @@ h3 {
   text-align: center;
   display: table-cell;
 }
-#container{
-position: fixed;
-top: 50%;
-left: 50%;
--webkit-transform: translate(-50%, -50%);
-transform: translate(-50%, -50%);
-}
+
 #contain{
   position: absolute;
   top: 25%;
@@ -115,6 +114,7 @@ transform: translate(-50%, -50%);
 .sauce{
   margin-top: 10px;
 }
-.font{
-
+.hello,
+.container-fluid{
+margin-top: 7%
 }

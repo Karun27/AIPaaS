@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Nav from './Nav';
-import {Button, Input, Card, CardText, CardTitle, Col} from 'reactstrap';
+import {Button, Input, Card, CardText, CardTitle, } from 'reactstrap';
+import './App.css';
 class Home extends Component {
   constructor(props) {
     super(props);
@@ -18,9 +19,9 @@ this.routeChange = this.routeChange.bind(this);
       return (
         <div>
         <Nav />
-        <br></br>
+          <div class="hello">
         {/* <div className="col-sm-4"> */}
-        <Col sm="12" md={{ size: 6, offset: 3 }}>
+        <div class="col-md-6 offset-md-3">
             <small>
         <Card body inverse style={{ backgroundColor: '#333', borderColor: '#333' }}>
         <CardTitle>AI PaaS Login Portal </CardTitle>    
@@ -44,8 +45,8 @@ this.routeChange = this.routeChange.bind(this);
         </form>  
         </Card>
         </small> 
-        </Col>
-        {/* </div>  */}
+        </div>
+        </div> 
         </div>
     
       );

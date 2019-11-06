@@ -24,7 +24,6 @@ const Example = (props) => {
 
 Whether it is Internal Application to Application(A2A/EAI) Integration, Process Integration(BPM), Process Integration, or Business to Business Integration using EDI / Web Services, API Management, Machine to Machine (M2M) Communications, Internet of Things(IOT), Cloud Integration or Mobile Application Integration, Miracle is the Systems Integrator of Choice and the Thought Leader in this industry. Miracle has been and continues to be a leader in the niche space of Business Integration and SOA services over the past 21 Years with Premier Partnerships with companies such as SAP, IBM, Oracle and Microsoft.
 
-Miracle employs the largest set of certified professionals with extensive industry knowledge in order to assist your organization with implementing the latest technologies. We have several different models of delivery to suit the needs of organizations of all sizes.
 </p>
 </CardText>
         </CardBody>

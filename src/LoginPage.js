@@ -2,17 +2,21 @@ import React, { Component } from 'react';
 import './App.css';
 import Navbar from './Nav.js'
 import Background from './Background';
-import {Button, Input, Card, CardText, CardTitle} from 'reactstrap';
+import { Button, Input, Card, CardText, CardTitle } from 'reactstrap';
 import Data from './axios/Data';
 
 class LoginPage extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      username: 'abc',
-      password: 'abc',
-      error: '',
-     
+      user: {
+        username: '',
+        password: ''
+      },
+      // username: "",
+      // password: "",
+      // error: "",
+
     };
 
     // this.handlePassChange = this.handlePassChange.bind(this);
@@ -22,6 +26,7 @@ class LoginPage extends Component {
     this.routeChange = this.routeChange.bind(this);
     // this.authorize = this.authorize.bind(this);
     this.route = this.route.bind(this);
+
   }
   // authorize(e) {
   //   const username = e.target.querySelector(
@@ -61,19 +66,20 @@ class LoginPage extends Component {
   //   });
   // };
   routeChange() {
-        let path = `Register`;
-       this.props.history.push(path);
-       }
-       route() {
-         if(this.state.username =="abc"&& this.state.password=="abc"){
-        let path = `Home`;
-       this.props.history.push(path);
-         }
-         else{
-          let path1 = `/`;  
-          this.props.history.push(path1);
-         }
-       }
+    let path = `Register`;
+    this.props.history.push(path);
+  }
+
+  route() {
+    if (this.state.username === "abc" && this.state.password === "abc") {
+      let path = `Home`;
+      this.props.history.push(path);
+    }
+    else {
+      let path1 = `/`;
+      this.props.history.push(path1);
+    }
+  }
   // handlePassChange(evt) {
   //   this.setState({
   //     password: evt.target.value,
@@ -84,74 +90,70 @@ class LoginPage extends Component {
     // NOTE: I use data-attributes for easier E2E testing
     // but you don't need to target those (any css-selector will work)
     // const login= (
-     
+
     // );
-//     const contact = (
-// < a href="/Data"></a>
-//     );
+    //     const contact = (
+    // < a href="/Data"></a>
+    //     );
+    const { user, submitted } = this.state;
 
     return (
-      
+
       <div>
-        
-      <Navbar />
-      <div id="container">
 
-        <div class="row">
-        <div class="col-md-3">
-     
-      {/* <Card body outline color="secondary"> */}
-      
-      <Card body inverse style={{ backgroundColor: '#333', borderColor: '#333' }}>
-        <CardTitle>AI PaaS Login Portal </CardTitle>  
-        <small>
-        <form>
-       {/* {
-        this.state.error &&
-        <p color="danger" data-test="error" onClick={this.dismissError}>
-          {this.state.error}
-        </p>
-      } */}
-       
-      <label>User Name</label>
-      <Input type="username" data-test="username" />
+        <Navbar />
+        <div class="container-fluid">
 
-      <label>Password</label>
-      <Input type="password" data-test="password" />
-<br></br>
-<div className="text-center">
-      <Button color="primary" size="sm" type="submit" onClick={this.route}>Login</Button>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      <Button color="secondary" size="sm" type="submit" onClick={this.routeChange}>Register</Button>
-      
-      </div>
-     
-    </form>
-        {/* {
-        this.state.authorized ? contact : login
-      } */}
-        </small>
-        
-        </Card>
+          <div class="row">
+            <div class="col-md-3">
+              <Card body inverse style={{ backgroundColor: '#333', borderColor: '#333' }}>
+                <CardTitle>AI PaaS Login Portal </CardTitle>
+
+                <form onSubmit={this.handleSubmit}>
+                  {/* {
+            this.state.error &&
+            <p color="danger" data-test="error" onClick={this.dismissError}>
+              {this.state.error}
+            </p>
+          } */}
+
+                  <label>User Name</label>
+                  <Input type="text" value={user.username} onChange={this.handleChange} required />
+
+                  <label>Password</label>
+                  <Input type="password" value={user.password} onChange={this.handleChange} required />
+
+                  <Button color="primary" size="sm" type="submit" >Login</Button>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <Button color="secondary" size="sm" type="submit" onClick={this.routeChange}>Register</Button>
+
+
+                </form>
+                {/* {
+            this.state.authorized ? contact : login
+          } */}
+              </Card>
+            </div>
+
+            <div class="container-fluid" className="col-md-9">
+              <Background />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <img src={require('./images/a.png')} alt="spark" width="75" />
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <img src={require('./images/b.png')} alt="spark" width="75" />
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <img src={require('./images/c.png')} alt="spark" width="75" />
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <img src={require('./images/d.png')} alt="spark" width="75" />
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <img src={require('./images/e.png')} alt="spark" width="75" />
+
+              <img src={require('./images/6.png')} alt="spark" width="55" />
+            </div>
+
+          </div>
         </div>
-    
-      <div className="col-md-9">
-      <Background />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      <img src={require('./images/a.png')} alt="spark" width="75"/>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      <img src={require('./images/b.png')} alt="spark" width="75"/>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      <img src={require('./images/c.png')} alt="spark" width="75"/>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      <img src={require('./images/d.png')}  alt="spark" width="75"/>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      <img src={require('./images/e.png')} alt="spark" width="75"/>
-      </div>
 
-      </div>
-      </div>
-      
       </div>
 
     );
