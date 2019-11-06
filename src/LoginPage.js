@@ -9,13 +9,9 @@ class LoginPage extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      user: {
-        username: '',
-        password: ''
-      },
-      // username: "",
-      // password: "",
-      // error: "",
+      username: "",
+      password: "",
+      error: "",
 
     };
 
@@ -24,6 +20,7 @@ class LoginPage extends Component {
     // this.handleSubmit = this.handleSubmit.bind(this);
     // this.dismissError = this.dismissError.bind(this);
     this.routeChange = this.routeChange.bind(this);
+    this.commonChange = this.commonChange.bind(this);
     // this.authorize = this.authorize.bind(this);
     this.route = this.route.bind(this);
 
@@ -65,13 +62,22 @@ class LoginPage extends Component {
   //     username: evt.target.value,
   //   });
   // };
+  commonChange(event) {
+    this.setState({
+        [event.target.name]: event.target.value
+    });
+}
+showValue(){
+  event.preventDefault();
+  alert('name '+ this.state.nameValue + ' age: ' + this.state.ageValue)
+}
   routeChange() {
     let path = `Register`;
     this.props.history.push(path);
   }
 
   route() {
-    if (this.state.username === "abc" && this.state.password === "abc") {
+    if (this.state.username == "abc" && this.state.password == "abc") {
       let path = `Home`;
       this.props.history.push(path);
     }
@@ -95,21 +101,19 @@ class LoginPage extends Component {
     //     const contact = (
     // < a href="/Data"></a>
     //     );
-    const { user, submitted } = this.state;
-
     return (
 
       <div>
 
         <Navbar />
-        <div class="container-fluid">
+        <div id="change"class="container-fluid">
 
           <div class="row">
             <div class="col-md-3">
               <Card body inverse style={{ backgroundColor: '#333', borderColor: '#333' }}>
                 <CardTitle>AI PaaS Login Portal </CardTitle>
 
-                <form onSubmit={this.handleSubmit}>
+                <form onClick={this.showValue}>
                   {/* {
             this.state.error &&
             <p color="danger" data-test="error" onClick={this.dismissError}>
@@ -118,13 +122,13 @@ class LoginPage extends Component {
           } */}
 
                   <label>User Name</label>
-                  <Input type="text" value={user.username} onChange={this.handleChange} required />
+                  <Input type="text" onChange={this.commonChange} required />
 
                   <label>Password</label>
-                  <Input type="password" value={user.password} onChange={this.handleChange} required />
+                  <Input type="password" onChange={this.commonChange}  required />
 
                   <Button color="primary" size="sm" type="submit" >Login</Button>
-                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+               
           <Button color="secondary" size="sm" type="submit" onClick={this.routeChange}>Register</Button>
 
 
@@ -135,21 +139,10 @@ class LoginPage extends Component {
               </Card>
             </div>
 
-            <div class="container-fluid" className="col-md-9">
-              <Background />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          <img src={require('./images/a.png')} alt="spark" width="75" />
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          <img src={require('./images/b.png')} alt="spark" width="75" />
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          <img src={require('./images/c.png')} alt="spark" width="75" />
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          <img src={require('./images/d.png')} alt="spark" width="75" />
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          <img src={require('./images/e.png')} alt="spark" width="75" />
-
-              <img src={require('./images/6.png')} alt="spark" width="55" />
-            </div>
+            <div className="col-md-9">
+              <Background />
+      
+              </div>
 
           </div>
         </div>

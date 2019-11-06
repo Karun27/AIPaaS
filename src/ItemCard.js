@@ -2,11 +2,11 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import {Button} from 'reactstrap';
 import {Link} from 'react-router-dom';
+import './App.css'
 
 export const ItemCard = ({toggleEditing, item, onChange, index, onDelete}) => (
     <div className="col-md-6 col-lg-3">
-      {/* <div className="card mb-3">
-        <div className="card-body"> */}
+      
           {item.isEditing
               ?
               <div className="mb-4">
@@ -40,27 +40,27 @@ export const ItemCard = ({toggleEditing, item, onChange, index, onDelete}) => (
               </div>
               :
               <Link to="/Project">
-              <Button color="info">
-                  
+              <Button color="light">
+              <div className="card mb-1">
+        <div className="card-body">
                 <h4 className="card-title text-center">{item.name}</h4>
-                <div className="row justify-content-center mb-4">
+                <div className="row justify-content-center mb-1">
                   <p className="card-text">
                     <span className="badge badge-light py-2 mr-2">Type</span>
                     <span>{item.type}</span>
+                  
                   </p>
-                  <p className="card-text">
-                    <span className="badge badge-light py-2 mr-5">Owner</span>
+                  </div> <div className="row justify-content-center mb-1">
+                  <p class="card-text ">
+                    <span class="badge badge-light py-2 mr-2">Owner</span>
                     <span>{item.owner}</span>
                   </p>
                 </div>
-                
+                </div></div>
               </Button>
               </Link>
           }
-
-          <div className="row justify-content-center">
-            <div>
-                <br></br>
+  <div>
               <Button
               color="secondary"
                   type="button"
@@ -76,13 +76,13 @@ export const ItemCard = ({toggleEditing, item, onChange, index, onDelete}) => (
                 Delete
               </Button>
             </div>
-          </div>
-        </div>
-    //   </div>
-    // </div>
+           
+      
+    
+   </div>
 );
 
-ItemCard.propTypes = {
+ItemCard.propTypes = {  
   image: PropTypes.string.isRequired,
   item: PropTypes.shape({
     name: PropTypes.string.isRequired,

@@ -30,8 +30,8 @@
   
  height: 400px;
  width:640px;
- /* margin-left: 17%;
- margin-bottom: 20%; */
+ margin-left: 29%;
+
  }
 
 h3 {
@@ -114,7 +114,24 @@ h3 {
 .sauce{
   margin-top: 10px;
 }
-.hello,
-.container-fluid{
-margin-top: 7%
+
+#change{
+  margin-top:7%;
+}
+
+ table.grid td {
+  border: 50px solid white;
+  padding: 14px;
+} 
+/* table.grid tr{
+  margin-top:20%;
+} */ */
+table {
+  border-spacing: 28px 52px;
+}
+td    {padding: 16px;}
+
+#one,
+#two{
+  padding-left:20%;
 }
