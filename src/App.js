@@ -6,6 +6,7 @@ import Register from './Register';
 import Data from './axios/Data';
 import HomePage from'./HomePage';
 import ProjectInfo from './ProjectInfo';
+import About from './About';
 class App extends Component {
   render() {
     return (      
@@ -16,6 +17,7 @@ class App extends Component {
       <Route path="/Data" component={Data}/>
       <Route path="/Home" component={HomePage}/>
       <Route path="/Project" component={ProjectInfo}/>
+      <Route path="/About" component={About}/>
     </Switch>
 </BrowserRouter>
     )};  

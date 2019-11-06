@@ -81,10 +81,8 @@ transform: translate(-50%, -50%);
 
 #con{
   width:300px;
-  margin-top: 10%;
-  margin-left:2%;
-  background-color: rgb(191, 211, 241);
-  height: 100%;
+  background-color: black;
+  height: 948px;
   overflow: hidden;
   direction: inherit;
   position: relative;
@@ -95,6 +93,28 @@ transform: translate(-50%, -50%);
 }
 .nav-link{
   font-family: Arial, Helvetica, sans-serif;
-  font-size: larger;
-  color:black;
+  font-size: medium;
+  color:white;
+}
+.nav-link :hover,
+.nav-link :focus {
+  color:white;
+}
+
+.gray{border:1px solid white;
+  height: 480px;
+
+
+
+}
+.green{border: 1px solid white;
+  height: 300px;
+  overflow: hidden;
+}
+
+.sauce{
+  margin-top: 10px;
+}
+.font{
+
 }

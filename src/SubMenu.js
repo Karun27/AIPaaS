@@ -26,15 +26,15 @@ class SubMenu extends React.Component {
 
     return (
         <div>
-      <Nav.Item className={classNames({ open: !this.state.collapsed })}>
+      <Nav.Item  className={classNames({ open: !this.state.collapsed })}>
         <Accordion>
-          <Accordion.Toggle class="link"
+          <Accordion.Toggle
             as={Nav.Link}
             eventKey="0"
             onClick={this.toggleNavbar}
           >
             
-            {title}
+            <span color="white">{title}</span>
             <FontAwesomeIcon
               icon={this.state.collapsed ? faCaretDown : faCaretUp}
               className="float-right"
