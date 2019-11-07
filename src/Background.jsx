@@ -21,7 +21,7 @@ const properties = {
 
 const Background = () => {
   return (
-    <div >
+    <div id="left" >
 
       <table cellsSpacing="1">
         <tbody>
