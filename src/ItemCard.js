@@ -56,7 +56,8 @@ export const ItemCard = ({toggleEditing, item, onChange, index, onDelete}) => (
                     <span>{item.owner}</span>
                   </p>
                 </div>
-                </div></div>
+                </div>
+                </div>
               </Button>
               </Link>
           }
