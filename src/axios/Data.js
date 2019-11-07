@@ -15,10 +15,10 @@ export default class PersonList extends React.Component {
           }
 
   componentDidMount() {
-  axios.defaults.baseURL = 'http://192.168.2.49:9674/api';
+  axios.defaults.baseURL = 'http://172.16.1.70/topics';
   axios.defaults.headers.post['Content-Type'] ='application/x-www-form-urlencoded';
   axios.defaults.headers.post['Access-Control-Allow-Origin'] = '*';
-    axios.get(`http://192.168.2.49:9674/api`)
+    axios.get(`http://172.16.1.70:8090/topics`)
       .then(res => {
         const topics = res.data;
         console.log(res);
@@ -29,7 +29,7 @@ export default class PersonList extends React.Component {
   render() {
     return (
       <ul>
-        {/* { this.state.topics.map(topic => <li>{topic.name}</li>)} */}
+        { this.state.topics.map(topic => <li>{topic.name}</li>)}
       </ul>
     )
   }
