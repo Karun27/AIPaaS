@@ -30,8 +30,6 @@
   
  height: 400px;
  width:640px;
- margin-left: 29%;
-
  }
 
 h3 {
@@ -140,13 +138,16 @@ td    {padding: 16px;}
 table.grid{
   align-self: center;
 }
-.pink{
+/* .pink{
 margin-left: 21rem;
 
-}
+} */
 .hello{
   margin-top: 7%;
 }
-#left{
+/* #left{
   margin-left: 6rem;
+} */
+#move{
+ margin-left:16rem;
 }
