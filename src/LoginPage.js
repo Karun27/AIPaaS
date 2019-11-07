@@ -104,7 +104,7 @@ class LoginPage extends Component {
       <Card id="inc" body inverse style={{ backgroundColor: '#333', borderColor: '#333' }}>
       <CardTitle>AI PaaS Login Portal </CardTitle>
       
-      <form>
+      <form onSubmit={this.route}>
       {/* {
       this.state.error &&
       <p color="danger" data-test="error" onClick={this.dismissError}>
@@ -113,12 +113,12 @@ class LoginPage extends Component {
       } */}
       
       <label>User Name </label>
-      <Input type="text" bsSize="md" required />
+      <Input type="text"required />
       
       <label>Password</label>
-      <Input type="password" bsSize="md" required />
+      <Input type="password" required />
       <br></br>
-      <Button color="primary" size="md" block type="submit" onClick={this.route} >Login</Button>
+      <Button color="primary" size="md" block type="submit"  >Login</Button>
       
       </form>
       </Card>
