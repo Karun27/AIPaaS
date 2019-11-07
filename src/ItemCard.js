@@ -41,8 +41,7 @@ export const ItemCard = ({toggleEditing, item, onChange, index, onDelete}) => (
               :
               <Link to="/Project">
               <Button color="light">
-                <div class= "d-flex justify-content-center">
-              <div className="card mb-1">
+              <div className="card mb-1" id="car">
         <div className="card-body">
                 <h4 className="card-title text-center">{item.name}</h4>
                 <div className="row justify-content-center mb-1">
@@ -58,11 +57,11 @@ export const ItemCard = ({toggleEditing, item, onChange, index, onDelete}) => (
                   </p>
                 </div>
                 </div></div>
-                </div>
+                
               </Button>
               </Link>
           }
-  <div>
+  <div id="ed" class="justify-content-end">
               <Button
               color="secondary"
                   type="button"
