@@ -95,54 +95,59 @@ class LoginPage extends Component {
     return (
 
       <div>
-
-        <Navbar />
-        <div id="change"class="container-fluid">
-
-          <div class="row">
-            <div class="col-md-3">
-              <Card body inverse style={{ backgroundColor: '#333', borderColor: '#333' }}>
-                <CardTitle>AI PaaS Login Portal </CardTitle>
-
-                <form>
-                  {/* {
-            this.state.error &&
-            <p color="danger" data-test="error" onClick={this.dismissError}>
-              {this.state.error}
-            </p>
-          } */}
-
-                  <label>User Name</label>
-                  <Input type="text" required />
-
-                  <label>Password</label>
-                  <Input type="password"   required />
-                <br></br>
-                <div class="d-flex justify-content-center">
-                  <Button color="primary" size="sm" type="submit" onClick={this.route}  >Login</Button>
-               &ensp;
-          <Button color="secondary" size="sm" type="submit" onClick={this.routeChange}>Register</Button>
-          </div>
-
-                </form>
-                {/* {
-            this.state.authorized ? contact : login
-          } */}
-              </Card>
-            </div>
-
-            <div className="col-md-9">
-              <Background />
       
-              </div>
-
-          </div>
-        </div>
-
+      <Navbar />
+      <div id="change"class="container-fluid">
+      
+      <div class="row">
+      <div class="col-md-3">
+      <Card id="inc" body inverse style={{ backgroundColor: '#333', borderColor: '#333' }}>
+      <CardTitle>AI PaaS Login Portal </CardTitle>
+      
+      <form>
+      {/* {
+      this.state.error &&
+      <p color="danger" data-test="error" onClick={this.dismissError}>
+      {this.state.error}
+      </p>
+      } */}
+      
+      <label>User Name </label>
+      <Input type="text" bsSize="md" required />
+      
+      <label>Password</label>
+      <Input type="password" bsSize="md" required />
+      <br></br>
+      <Button color="primary" size="md" block type="submit" onClick={this.route} >Login</Button>
+      
+      </form>
+      </Card>
+      <br></br>
+      <h5 class= "d-flex justify-content-center"> New to AI PaaS?</h5>
+      <br></br>
+      
+      <Button id="ind" color="secondary" size="md" block type="submit" onClick={this.routeChange}>Register</Button>
+      
+      
+      
+      {/* {
+      this.state.authorized ? contact : login
+      } */}
+      
       </div>
-
-    );
-  }
-}
-
-export default LoginPage;
+      
+      <div className="col-md-9">
+      <Background />
+      
+      </div>
+      
+      </div>
+      </div>
+      
+      </div>
+      
+      );
+      }
+      }
+      
+      export default LoginPage;

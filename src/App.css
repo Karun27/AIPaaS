@@ -152,8 +152,8 @@ margin-left: 21rem;
  margin-left:16rem;
 }
 #car{
-  width:15rem;
-  height:12rem;
+  width:18rem;
+  height:14rem;
   /* overflow: hidden;
   overflow-y: overlay ; */
 }
@@ -161,3 +161,18 @@ margin-left: 21rem;
   width:15rem;
   margin-left:4rem;
 }
+.col-md-3{
+  height:35rem;
+  }
+  #inc{
+  
+  margin-left:2rem;
+  
+  }
+  #ind{
+  
+  margin-left:1rem;
+  
+  }
+ 
+  

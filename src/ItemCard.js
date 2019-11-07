@@ -43,7 +43,7 @@ export const ItemCard = ({toggleEditing, item, onChange, index, onDelete}) => (
               <Button color="light">
               <div className="card mb-1" id="car">
         <div className="card-body">
-                <h4 className="card-title text-center">{item.name}</h4>
+                <h4 className="card-title text-center">Name{item.name}</h4>
                 <div className="row justify-content-center mb-1">
                   <p className="card-text">
                     <span className="badge badge-light py-2 mr-2">Type</span>

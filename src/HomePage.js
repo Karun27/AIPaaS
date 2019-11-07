@@ -42,7 +42,7 @@ class HomePage extends Component {
         type: this.state.type,
 	    	owner: this.state.owner
 	  }
-    console.log('Hello ' + data.name + ', your message is: ' + data.owner);
+   
   }
 
   render() {
@@ -53,7 +53,7 @@ class HomePage extends Component {
         
       <Navbar />
       <p class="text-center">
-           <h1 className="display-4 my-4 text-center text-muted"><b>AI PaaS</b></h1></p>    
+      <img src={require('./images/logo.jpg')} alt="spark" width="250" /></p>    
      <Container>
       <div class="row">   
             <div class="circle">

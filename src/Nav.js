@@ -12,6 +12,7 @@ import {
   DropdownMenu,
   DropdownItem } from 'reactstrap';
 import image1 from './images/miracle.png';
+import image2 from './images/paas2.png';
 import './App.css';
 
 const Example = (props) => {
@@ -23,7 +24,8 @@ const Example = (props) => {
     <div>
       <Navbar color="dark" light expand="md" >
         <NavbarBrand href="/">
-           <img src={image1} height="30"/>
+           <img src={image1} height="40"/>&ensp;
+           <img src={image2} height="45"/>
         </NavbarBrand>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>

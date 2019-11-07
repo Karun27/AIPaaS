@@ -1,16 +1,19 @@
 import React from 'react';
-
 import axios from 'axios';
+
 
 export default class PersonList extends React.Component {
     constructor(props) {
         		super(props);
-        		this.state = {topics: []};
+            this.state = {topics: [],
+              modal: false
+            };
         		this.headers = [
         			{ key: 'id', label: 'id'},
         			{ key: 'name', label: 'name' },
         			{ key: 'description', label: 'description' }
             ];
+            this.toggle = this.toggle.bind(this);
             
           }
 
@@ -25,12 +28,24 @@ export default class PersonList extends React.Component {
         this.setState({ topics });  
       })
   }
+  toggle() {
+    this.setState({
+      modal: !this.state.modal
+    });
+  }
 
   render() {
     return (
-      <ul>
+      <div class="container">
+        <div class="row">
+      
+
+<ul>
         { this.state.topics.map(topic => <li>{topic.name}</li>)}
       </ul>
+        </div>
+      </div>
+      
     )
   }
 }

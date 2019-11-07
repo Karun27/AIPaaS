@@ -1,8 +1,10 @@
 import React, {Component} from 'react';
 import {ItemCard} from "./ItemCard";
 import {AddItem} from "./AddItem";
+import NewProject from './NewProject';
 
 class Test extends Component {
+
   state = {
     name: "",
     type: "",
@@ -11,11 +13,15 @@ class Test extends Component {
     ]
     
   };
+  // this.toggle= this.toggle.bind(this);
+
 
   /**
    * Handle input changes in the AddItem component.
    * @param event
    */
+
+  
   handleInputChange = event => {
     const target = event.target;
     const value = target.value;
@@ -110,14 +116,21 @@ class Test extends Component {
     const {name, type, owner} = this.state;
     return <div>
       <div className="container pt-4">
-        <AddItem
+      <NewProject 
+      name={name}
+      type={type}
+      owner={owner}
+      onSubmit={this.addItem}
+      onChange={this.handleInputChange}/>
+        {/* <AddItem
             name={name}
             type={type}
             owner={owner}
             onChange={this.handleInputChange}
             onSubmit={this.addItem}
             
-        />
+        /> */}
+        
 
         <h1 className="display-4 my-4 text-center text-muted">Ongoing Projects</h1>
         <hr/>

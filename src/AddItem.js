@@ -1,9 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+
 export const AddItem = ({name, type, owner, onChange, onSubmit}) => (
     <div className="row justify-content-center">
           <h1 className="display-4 my-4 text-center text-muted">Create a New Project</h1>
+      
       <form className="form-inline" onSubmit={onSubmit}>
         <input
             type="text"
@@ -36,6 +38,7 @@ export const AddItem = ({name, type, owner, onChange, onSubmit}) => (
         </div>
         <button type="submit" className="btn btn-primary mb-2 pxy-4">Save</button>
       </form>
+
     </div>
 );
 
