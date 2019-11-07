@@ -54,7 +54,7 @@ const Background = () => {
           </tbody>
           </table>
           <div class="pink">
-          <table class="grid">
+          <table class="grid" cellspacing="2" cellpadding="2">
             <tbody>
 
            
@@ -64,11 +64,11 @@ const Background = () => {
             <tr>
 
 
-              <td>
+              <td >
                 <img src={require('./images/a.png')} alt="spark" width="100" />
-
+                &ensp; &ensp;&ensp;&ensp;
                 <img src={require('./images/b.png')} alt="spark" width="100" />
-
+                &ensp;&ensp;&ensp;
                 <img src={require('./images/c.png')} alt="spark" width="100" />
               </td>
             </tr>
@@ -78,9 +78,9 @@ const Background = () => {
               <td>
                 <img src={require('./images/d.png')} alt="spark" width="100" />
 
-
+                &ensp; &ensp;&ensp;&ensp;
                 <img src={require('./images/e.png')} alt="spark" width="100" />
-
+                &ensp;&ensp;&ensp;&ensp;
                 <img src={require('./images/6.png')} alt="spark" width="100" />
               </td>
             </tr>

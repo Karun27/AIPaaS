@@ -117,9 +117,9 @@ class LoginPage extends Component {
 
                   <label>Password</label>
                   <Input type="password"   required />
-
+                <br></br>
                   <Button color="primary" size="sm" type="submit" onClick={this.route}  >Login</Button>
-               
+               &ensp;
           <Button color="secondary" size="sm" type="submit" onClick={this.routeChange}>Register</Button>
 
 
