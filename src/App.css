@@ -152,10 +152,12 @@ margin-left: 21rem;
  margin-left:16rem;
 }
 #car{
-  width: 15rem;
-  height: 12rem;
+  width:15rem;
+  height:12rem;
+  /* overflow: hidden;
+  overflow-y: overlay ; */
 }
 #ed{
-  width: 15rem;
-  margin-left: 4rem;
+  width:15rem;
+  margin-left:4rem;
 }

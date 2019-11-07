@@ -21,14 +21,11 @@ const properties = {
 
 const Background = () => {
   return (
-    <div class="d-flex justify-content-around" >
- 
+    <div id="left" >
 
       <table cellsSpacing="1">
         <tbody>
-       
           <tr id="one">
-      
             <td>
               <div className="slide-container">
                 <Slide >
@@ -53,46 +50,46 @@ const Background = () => {
                 </Slide>
               </div>
             </td>
-         
           </tr>
-     
-          <div class="d-flex justify-content-around">
+          </tbody>
+          </table>
+          <div class="pink">
+          <table class="grid" cellspacing="2" cellpadding="2">
+            <tbody>
 
-
+           
+          <tr class="align-items-center">
+            <td>
 
             <tr>
-              <td>
-
-                <tr>
 
 
-                  <td >
-                    <img src={require('./images/a.png')} alt="spark" width="100" />
-                    &ensp; &ensp;&ensp;&ensp;
+              <td >
+                <img src={require('./images/a.png')} alt="spark" width="100" />
+                &ensp; &ensp;&ensp;&ensp;
                 <img src={require('./images/b.png')} alt="spark" width="100" />
-                    &ensp;&ensp;&ensp;
+                &ensp;&ensp;&ensp;
                 <img src={require('./images/c.png')} alt="spark" width="100" />
-                  </td>
-                </tr>
-
-
-                <tr>
-                  <td>
-                    <img src={require('./images/d.png')} alt="spark" width="100" />
-
-                    &ensp; &ensp;&ensp;&ensp;
-                <img src={require('./images/e.png')} alt="spark" width="100" />
-                    &ensp;&ensp;&ensp;&ensp;
-                <img src={require('./images/6.png')} alt="spark" width="100" />
-                  </td>
-                </tr>
               </td>
             </tr>
-          </div>
+           
+             
+            <tr>
+              <td>
+                <img src={require('./images/d.png')} alt="spark" width="100" />
+
+                &ensp; &ensp;&ensp;&ensp;
+                <img src={require('./images/e.png')} alt="spark" width="100" />
+                &ensp;&ensp;&ensp;&ensp;
+                <img src={require('./images/6.png')} alt="spark" width="100" />
+              </td>
+            </tr>
+            </td>
+          </tr>
         </tbody>
       </table>
+      </div>
     </div>
-
 
 
 
