@@ -21,7 +21,7 @@ const properties = {
 
 const Background = () => {
   return (
-    <div id="left" >
+    <div class="d-flex justify-content-around" >
 
       <table cellsSpacing="1">
         <tbody>
@@ -51,14 +51,8 @@ const Background = () => {
               </div>
             </td>
           </tr>
-          </tbody>
-          </table>
-          <div class="pink">
-          <table class="grid" cellspacing="2" cellpadding="2">
-            <tbody>
-
-           
-          <tr class="align-items-center">
+<div class="d-flex justify-content-around">
+          <tr>
             <td>
 
             <tr>
@@ -86,10 +80,11 @@ const Background = () => {
             </tr>
             </td>
           </tr>
+          </div>
         </tbody>
       </table>
       </div>
-    </div>
+
 
 
 
