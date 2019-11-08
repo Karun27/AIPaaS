@@ -116,12 +116,8 @@ class Test extends Component {
     const {name, type, owner} = this.state;
     return <div>
       <div className="container pt-4">
-      <NewProject 
-      name={name}
-      type={type}
-      owner={owner}
-      onSubmit={this.addItem}
-      onChange={this.handleInputChange}/>
+      <NewProject />
+     
         {/* <AddItem
             name={name}
             type={type}

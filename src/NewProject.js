@@ -2,6 +2,8 @@ import React from "react";
 import ReactDOM from "react-dom";
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import {Modal, ModalBody, Button, ModalHeader, Input} from "reactstrap";
+import CardComponent from "./CardComponent";
+import {Link} from 'react-router-dom';
 
 
 
@@ -10,93 +12,72 @@ class NewProject extends React.Component {
     super(props);
 
     this.state = {
-      modal: false,
-      modalInputName: "",
-      modalInputType: "",
-      modalInputOwner: "",
-      change: '',
-      items:[]
+      people: [],
+
     };
+    this.headers = [
+      { key: 'name', label: 'name'},
+      { key: 'owner', label: 'owner' },
+      { key: 'description', label: 'description' }
+    ];
     this.toggle= this.toggle.bind(this);
+    this.handleClick = this.handleClick.bind(this);
+
     
   }
   
   toggle() {
     this.setState({
-      modal: !this.state.modal
+      modal: !this.state.modal,
+      people:[]
     });
   }
-  addItem = event => {
-    event.preventDefault();
-    const {modalInputName, modalInputType, modalInputOwner} = this.state;
-    const itemsInState = this.state.items;
-    const itemsArrayLength = itemsInState.length;
-    const id = itemsArrayLength ? (itemsInState[itemsArrayLength - 1].id + 1) : 1;
-    this.setState({
-      items: [
-        ...itemsInState,
-        Object.assign({}, {
-          id,
-          modalInputName,
-          modalInputType,
-          modalInputOwner
-        })
-      ],
-      modalInputName: "",
-      modalInputType: "",
-      modalInputOwner:""
-    })
-  };
+  handleClick (){
+    if (this.nameTextInput !== null) {
+      this.setState({
+        people: this.state.people.concat( this.nameTextInput.value, this.typeTextInput.value, this.ownerTextInput.value),
+        modal:false
+      });
+      
 
+    }
 
-
-  handleChange(e) {
-    const target = e.target;
-    const name = target.name;
-    const type = target.type;
-    const owner = target.owner;
-    const value = target.value;
-
-    this.setState({
-      [name]: value,
-      [type]: value,
-      [owner]: value
-    });
   }
 
-  handleSubmit(e) {
 
-    this.setState({
-      name: this.state.modalInputName,
-      type: this.state.modalInputType,
-      owner: this.state.modalInputOwner,
-    
-    });
-    this.modalClose();
-  }
+ 
+  
+  // componentDidUpdate (){
+  //   this.nameTextInput.value = '';
+  //   this.typeTextInput.value = '';
+  //   this.ownerTextInput.value = '';
+
+  // }
+
 
   modalOpen() {
     this.setState({ modal: true });
   }
 
-  modalClose() {
-    this.setState({
-      modalInputName: "",
-      modalInputType: "",
-      modalInputOwner: "",
-      modal: false
-    });
-  }
+  // modalClose() {
+  //   this.setState({
+  //     nameTextInput: "",
+  //     modalInputType: "",
+  //     modalInputOwner: "",
+  //     modal: false
+  //   });
+  // }
 
   render() {
+    let names = this.state.people.map(name => {
+      return(  
+      <li>{name}</li>
+      )   
+    });
+let hi= console.log(names);
     return (
       <div className="App">
-        <h1>
-         {this.state.name}
-          {this.state.type}
-          {this.state.owner}
-          {this.state.items}
-        </h1>
+       
         <Button color="primary" onClick={this.toggle}>
           Create new Project
         </Button>
@@ -107,39 +88,28 @@ class NewProject extends React.Component {
           </ModalHeader>
           <ModalBody>
           <div className="form-group" >
-            <label>Enter Name:</label>
-            <Input
-              type="text"
-              value={this.state.modalInputName}
-              name="modalInputName"
-              onChange={e => this.handleChange(e)}
-              className="form-control"
-            />
-            <label>Type:</label>
-            <Input
-              type="text"
-              value={this.state.modalInputType}
-              name="modalInputType"
-              onChange={e => this.handleChange(e)}
-              className="form-control"
-            />
-            <label>Owner</label>
-            <Input
-              type="text"
-              value={this.state.modalInputOwner}
-              name="modalInputOwner"
-              onChange={e => this.handleChange(e)}
-              className="form-control"
-            />
-         </div>
-          <div className="form-group">
-            <Button color="success" onClick={e => this.handleSubmit(e)} type="button">
-              Save
+            Enter Name:
+            <input type="text" placeholder="Enter a new name" ref={(ref) => this.nameTextInput = ref} className="form-control" />
+            Enter Member:
+                        <input type="text" placeholder="Enter a new name" ref={(ref) => this.typeTextInput = ref} className="form-control" />
+                        Enter Description:
+            <input type="text" placeholder="Enter a new name" ref={(ref) => this.ownerTextInput = ref} className="form-control" />
+            </div>
+            <div className="form-group" >
+          
+            <Button color="success" onClick={this.handleClick}  type="button">
+              Create new Project
             </Button>
             
-          </div>
+            </div>
           </ModalBody>
         </Modal>
+        {/* <CardComponent name={hi[0]} type= {hi[1]} owner={hi[2]} /> */}
+        <div className="row">
+            <div className="col-md-4 col-md-offset-2">
+  {names}
+            </div>
+          </div>
       </div>
     );
   }
