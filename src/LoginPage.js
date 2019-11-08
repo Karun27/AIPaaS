@@ -118,17 +118,16 @@ class LoginPage extends Component {
       <label>Password</label>
       <Input type="password" required />
       <br></br>
-      <Button color="primary" size="md" block type="submit"  >Login</Button>
+      <Button color="primary" size="md" block type="submit" >Login</Button>
+      
+      
+      <br></br>
+      <h6 class= "d-flex justify-content-center"> New to AI PaaS?</h6>
+      
+      <Button color="secondary" size="md" block type="submit" onClick={this.routeChange}>Register</Button>
       
       </form>
       </Card>
-      <br></br>
-      <h5 class= "d-flex justify-content-center"> New to AI PaaS?</h5>
-      <br></br>
-      
-      <Button id="ind" color="secondary" size="md" block type="submit" onClick={this.routeChange}>Register</Button>
-      
-      
       
       {/* {
       this.state.authorized ? contact : login
