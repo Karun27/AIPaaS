@@ -96,12 +96,15 @@ class LoginPage extends Component {
 
       <div>
       
-      <Navbar />
-      <div id="change"class="container-fluid">
+      <Navbar/>
+      <div class="d-md-flex h-md-100 align-items-center">
+      <div class="col-md-6 ">
+    <div class="lign-items-center h-100 p-5">
+      {/* <div id="change"class="container-fluid">
       
       <div class="row">
-      <div class="col-md-3">
-      <Card id="inc" body inverse style={{ backgroundColor: '#333', borderColor: '#333' }}>
+      <div class="col-md-3"> */}
+      <Card id="inc"  body inverse style={{ backgroundColor: '#333', borderColor: '#333' }}>
       <CardTitle>AI PaaS Login Portal </CardTitle>
       
       <form onSubmit={this.route}>
@@ -128,22 +131,59 @@ class LoginPage extends Component {
       
       </form>
       </Card>
+
       
       {/* {
       this.state.authorized ? contact : login
       } */}
+      <div class="d-flex justify-content-around">
+        <table id="india">
+          <tr>
+            <td>
+
+            <tr>
+
+
+            <td>
+              <img src={require('./images/a.png')} alt="spark" width="100" /> 
+              &ensp; &ensp;&ensp;&ensp;
+             <img src={require('./images/b.png')} alt="spark" width="100" />
+              &ensp;&ensp;&ensp;
+              <img src={require('./images/c.png')} alt="spark" width="100" />
+              </td>
+            </tr>
+           
+             
+            <tr>
+              <td>
+                <img src={require('./images/d.png')} alt="spark" width="100" />
+
+                &ensp; &ensp;&ensp;&ensp;
+                <img src={require('./images/e.png')} alt="spark" width="100" />
+                &ensp;&ensp;&ensp;&ensp;
+                <img src={require('./images/6.png')} alt="spark" width="100" />
+              </td>
+            </tr>
+            </td>
+          </tr>
+          </table>
+          </div>
       
       </div>
       
-      <div className="col-md-9">
+      </div>
+     
+      <div class="col-md-6 p-0 bg-white h-md-100 loginarea" id="hie">
+        
+      {/* <div className="col-md-9"> */}
       <Background />
       
       </div>
-      
       </div>
       </div>
-      
-      </div>
+      // </div>
+      // </div>
+      // </div>
       
       );
       }

@@ -12,6 +12,9 @@ class NewProject extends React.Component {
     super(props);
 
     this.state = {
+      nameTextInput: "",
+      typeTextInput: "",
+      ownerTextInput:"",
       people: [],
 
     };
@@ -36,12 +39,24 @@ class NewProject extends React.Component {
     if (this.nameTextInput !== null) {
       this.setState({
         people: this.state.people.concat( this.nameTextInput.value, this.typeTextInput.value, this.ownerTextInput.value),
-        modal:false
+        modal:false 
       });
       
 
     }
 
+  }
+  nameChange = (e) => {
+    this.setState({
+      nameTextInput: e.target.value});
+  }
+ typeChange = (e) => {
+    this.setState({
+      typeTextInput: e.target.value});
+  }
+  ownerChange = (e) => {
+    this.setState({
+      ownerTextInput: e.target.value});
   }
 
 

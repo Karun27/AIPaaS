@@ -1,93 +1,73 @@
-import React, { Component } from 'react';
-import { Slide } from 'react-slideshow-image';
+import React, { useState, useCallback, useRef } from "react";
+import ReactDOM from "react-dom";
+import RBCarousel from "react-bootstrap-carousel";
+import { Row, Col, Button, ButtonGroup } from "reactstrap";
+import './App.css';
 
-const slideImages = [
-  'src/images/1.jpg',
-  'images/2.jpg',
-  './src/images/3.png',
-  'C:/Users/Karun/app/src/images/4.jpg'
-];
+const styles = { height: 400, width: "100%" };
 
-const properties = {
-  duration: 5000,
-  transitionDuration: 100,
-  infinite: true,
-  indicators: true,
-  arrows: true,
-  onChange: (oldIndex, newIndex) => {
-    console.log(`slide transition from ${oldIndex} to ${newIndex}`);
-  }
-}
 
-const Background = () => {
+function Background() {
+  const [autoplay, setAutoplay] = useState(true);
+  const [icon, setIcon] = useState({});
+  const slider_ref = useRef(null);
+  const _autoplay = useCallback(() => setAutoplay(autoplay => !autoplay), []);
+  const _visiableOnSelect = useCallback(active => {
+    console.log(`visiable onSelect active=${active}`);
+  }, []);
+  const _onSelect = useCallback((active, direction) => {
+    console.log(`active=${active} && direction=${direction}`);
+  }, []); 
   return (
-    <div class="d-flex justify-content-around" >
-
-      <table cellsSpacing="1">
-        <tbody>
-          <tr id="one">
-            <td>
-              <div className="slide-container">
-                <Slide >
-                  <div className="each-slide">
-                    <div> <img src={require('./images/1.jpg')} />
-
-                    </div>
-                  </div>
-                  <div className="each-slide">
-                    <div> <img src={require('./images/2.jpg')} />
-
-                    </div>
-                  </div>
-                  <div className="each-slide">
-                    <div> <img src={require('./images/3.png')} />
-                    </div>
-                  </div>
-                  <div className="each-slide">
-                    <div> <img src={require('./images/4.jpg')} />
-                    </div>
-                  </div>
-                </Slide>
-              </div>
-            </td>
-          </tr>
-<div class="d-flex justify-content-around">
-          <tr>
-            <td>
-
-            <tr>
-
-
-              <td >
-                <img src={require('./images/a.png')} alt="spark" width="100" />
-                &ensp; &ensp;&ensp;&ensp;
-                <img src={require('./images/b.png')} alt="spark" width="100" />
-                &ensp;&ensp;&ensp;
-                <img src={require('./images/c.png')} alt="spark" width="100" />
-              </td>
-            </tr>
-           
+    <div className="container" id="bye">
+     
+          <RBCarousel
+            animation={true}
+            autoplay={autoplay}
+            slideshowSpeed={2000}
+            defaultActiveIndex={0}
+            leftIcon={icon.leftIcon}
+            rightIcon={icon.rightIcon}
+            onSelect={_onSelect}
+            ref={slider_ref}
+            version={4}
+          >
              
-            <tr>
-              <td>
-                <img src={require('./images/d.png')} alt="spark" width="100" />
+            <div style={{ ...styles, backgroundColor: "#7d90e3", height: 950 }}>
+              <img
+                style={{ width: "75%", height: "250", marginLeft: 120, marginTop: 150 }}
+                src={require('./images/1.jpg')}
+              />
+              <div className="carousel-caption">Big Data </div>
+            </div>
+            <div style={{ ...styles, backgroundColor: "#fa996b", height: 950 }}>
+              <img
+                style={{ width: "75%", height: "250", marginLeft: 120, marginTop: 150 }}
+                src={require('./images/2.jpg')}
+              />
+              <div className="carousel-caption">AI</div>
+            </div>
+            <div style={{ ...styles, backgroundColor: "#e88e8e", height: 950 }}>
+              <img
+                style={{ width: "75%", height: "250", marginLeft: 120, marginTop: 150 }}
+                src={require('./images/3.png')}
+              />
+              <div className="carousel-caption">Paas</div>
+            </div>
+            <div style={{ ...styles, backgroundColor: "#4db6ac", height: 950 }}>
+            
+              <img
+                style={{ width: "75%", height: "250", marginLeft: 120, marginTop: 150 }}
+                src={require('./images/4.jpg')}
+              />
+              <div className="carousel-caption">Artificial Intelligence</div>
+            </div>
+            
+            
+          </RBCarousel>
 
-                &ensp; &ensp;&ensp;&ensp;
-                <img src={require('./images/e.png')} alt="spark" width="100" />
-                &ensp;&ensp;&ensp;&ensp;
-                <img src={require('./images/6.png')} alt="spark" width="100" />
-              </td>
-            </tr>
-            </td>
-          </tr>
-          </div>
-        </tbody>
-      </table>
-      </div>
-
-
-
-
-  )
+    </div>
+  );
 }
+
 export default Background;
