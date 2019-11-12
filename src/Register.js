@@ -32,6 +32,8 @@ this.routeChange = this.routeChange.bind(this);
         <Input type="text" name="lastname" required/>
         <label>Email:</label>
         <Input type="text" name="email" required />
+        <label>Username:</label>
+        <Input type="text" name="username" required />
         <label>Password</label>
         <Input type="password" name="pwd" required />
         <label>Confirm Password</label>
