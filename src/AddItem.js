@@ -20,7 +20,7 @@ export const AddItem = ({name, type, owner, onChange, onSubmit}) => (
           <input
               type="text"
               className="form-control"
-              placeholder="Type"
+              placeholder="Owner"
               value={type}
               name="type"
               onChange={onChange}
@@ -30,7 +30,7 @@ export const AddItem = ({name, type, owner, onChange, onSubmit}) => (
           <input
               type="text"
               className="form-control"
-              placeholder="Owner"
+              placeholder="Description"
               value={owner}
               name="owner"
               onChange={onChange}

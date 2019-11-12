@@ -23,7 +23,7 @@ export const ItemCard = ({toggleEditing, item, onChange, index, onDelete}) => (
                     type="text"
                     name="type"
                     className="form-control"
-                    placeholder="Type"
+                    placeholder="Owner"
                     value={item.type}
                     onChange={event => onChange(event, index)}
                     required
@@ -32,7 +32,7 @@ export const ItemCard = ({toggleEditing, item, onChange, index, onDelete}) => (
                     type="text"
                     name="owner"
                     className="form-control"
-                    placeholder="Owner"
+                    placeholder="Description"
                     value={item.owner}
                     onChange={event => onChange(event, index)}
                     required
@@ -46,13 +46,13 @@ export const ItemCard = ({toggleEditing, item, onChange, index, onDelete}) => (
                 <h4 className="card-title text-center">{item.name}</h4>
                 <div className="row justify-content-center mb-1">
                   <p className="card-text">
-                    <span className="badge badge-light py-2 mr-2">Type</span>
+                    <span className="badge badge-light py-2 mr-2">Owner</span>
                     <span>{item.type}</span>
                   
                   </p>
                   </div> <div className="row justify-content-center mb-1">
                   <p class="card-text ">
-                    <span class="badge badge-light py-2 mr-2">Owner</span>
+                    <span class="badge badge-light py-2 mr-2">Description</span>
                     <span>{item.owner}</span>
                   </p>
                 </div>
