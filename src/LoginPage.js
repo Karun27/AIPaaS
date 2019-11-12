@@ -4,6 +4,8 @@ import Navbar from './Nav.js'
 import Background from './Background';
 import { Button, Input, Card, CardText, CardTitle } from 'reactstrap';
 import Data from './axios/Data';
+import image1 from './images/mcle.jpg';
+import image2 from './images/paas2.png';
 
 class LoginPage extends Component {
   constructor(props) {
@@ -96,10 +98,12 @@ class LoginPage extends Component {
 
       <div>
       
-      <Navbar/>
+      
       <div class="d-md-flex h-md-100 align-items-center">
-      <div class="col-md-6 ">
+      <div class="col-md-6 "> 
     <div class="lign-items-center h-100 p-5">
+    <img src={require('./images/mcle.jpg')} alt="spark" width="150" />
+    <img src={require('./images/logo.jpg')} alt="spark" width="170" />
       {/* <div id="change"class="container-fluid">
       
       <div class="row">

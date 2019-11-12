@@ -53,7 +53,7 @@ class HomePage extends Component {
         
       <Navbar />
       <p class="text-center">
-      <img src={require('./images/logo.jpg')} alt="spark" width="250" /></p>    
+      </p>    
      <Container>
       <div class="row">   
             <div class="circle">

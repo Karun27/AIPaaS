@@ -56,7 +56,7 @@ class NewProject extends React.Component {
   }
   ownerChange = (e) => {
     this.setState({
-      ownerTextInput: e.target.value});
+      TextInput: e.target.value});
   }
 
 

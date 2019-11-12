@@ -116,16 +116,15 @@ class Test extends Component {
     const {name, type, owner} = this.state;
     return <div>
       <div className="container pt-4">
-      <NewProject />
-     
-        {/* <AddItem
+      {/* <NewProject /> */}
+ <AddItem
             name={name}
             type={type}
             owner={owner}
             onChange={this.handleInputChange}
             onSubmit={this.addItem}
             
-        /> */}
+        />
         
 
         <h1 className="display-4 my-4 text-center text-muted">Ongoing Projects</h1>

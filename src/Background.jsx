@@ -12,9 +12,6 @@ function Background() {
   const [icon, setIcon] = useState({});
   const slider_ref = useRef(null);
   const _autoplay = useCallback(() => setAutoplay(autoplay => !autoplay), []);
-  const _visiableOnSelect = useCallback(active => {
-    console.log(`visiable onSelect active=${active}`);
-  }, []);
   const _onSelect = useCallback((active, direction) => {
     console.log(`active=${active} && direction=${direction}`);
   }, []); 
@@ -33,28 +30,28 @@ function Background() {
             version={4}
           >
              
-            <div style={{ ...styles, backgroundColor: "#7d90e3", height: 950 }}>
+            <div style={{ ...styles, backgroundColor: "#7d90e3", height: 1005 }}>
               <img
                 style={{ width: "75%", height: "250", marginLeft: 120, marginTop: 150 }}
                 src={require('./images/1.jpg')}
               />
               <div className="carousel-caption">Big Data </div>
             </div>
-            <div style={{ ...styles, backgroundColor: "#fa996b", height: 950 }}>
+            <div style={{ ...styles, backgroundColor: "#fa996b", height: 1005 }}>
               <img
                 style={{ width: "75%", height: "250", marginLeft: 120, marginTop: 150 }}
                 src={require('./images/2.jpg')}
               />
               <div className="carousel-caption">AI</div>
             </div>
-            <div style={{ ...styles, backgroundColor: "#e88e8e", height: 950 }}>
+            <div style={{ ...styles, backgroundColor: "#e88e8e", height: 1005 }}>
               <img
                 style={{ width: "75%", height: "250", marginLeft: 120, marginTop: 150 }}
                 src={require('./images/3.png')}
               />
               <div className="carousel-caption">Paas</div>
             </div>
-            <div style={{ ...styles, backgroundColor: "#4db6ac", height: 950 }}>
+            <div style={{ ...styles, backgroundColor: "#4db6ac", height: 1005 }}>
             
               <img
                 style={{ width: "75%", height: "250", marginLeft: 120, marginTop: 150 }}
